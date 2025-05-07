@@ -3,66 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benvenuto su GitHub - stildedeye</title>
+  <title>GitHub di stildedeye</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
       margin: 0;
       padding: 2rem;
-    }
-    h1 {
-      color: #58a6ff;
-    }
-    a {
-      color: #8b949e;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #58a6ff;
-    }
-    .repo-list {
-      list-style: none;
-      padding: 0;
-    }
-    .repo {
-      margin: 1rem 0;
-      padding: 1rem;
-      background: #161b22;
-      border-radius: 8px;
-    }
-    .repo-title {
-      font-size: 1.2rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
       color: #c9d1d9;
     }
+
+    h1, h2 {
+      color: #58a6ff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .repo-box {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .repo-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 10px #58a6ff33;
+    }
+
+    .repo-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #58a6ff;
+    }
+
+    .repo-description {
+      font-size: 0.95rem;
+      color: #8b949e;
+    }
+
     .footer {
+      text-align: center;
       margin-top: 4rem;
-      font-size: 0.9rem;
       color: #6e7681;
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
-  <h1>Ciao! Sono <a href="https://github.com/stildedeye">@stildedeye</a></h1>
-  <p>Benvenuto nella mia pagina GitHub Pages. Qui trovi una selezione delle mie repository pubbliche più interessanti.</p>
 
-  <h2>Le mie Repository</h2>
-  <ul class="repo-list">
-    <li class="repo">
-      <div class="repo-title"><a href="https://github.com/stildedeye/NOME_REPO_1">NOME_REPO_1</a></div>
-      <p>Descrizione breve della repo 1.</p>
-    </li>
-    <li class="repo">
-      <div class="repo-title"><a href="https://github.com/stildedeye/NOME_REPO_2">NOME_REPO_2</a></div>
-      <p>Descrizione breve della repo 2.</p>
-    </li>
-    <!-- Aggiungi altre repo qui -->
-  </ul>
+  <h1>Ciao, sono <a href="https://github.com/stildedeye">@stildedeye</a></h1>
+  <p>Qui trovi alcune delle mie repository pubbliche su GitHub:</p>
+
+  <div class="container">
+    <div class="repo-box">
+      <a href="https://github.com/stildedeye/NOME_REPO_1">
+        <div class="repo-title">NOME_REPO_1</div>
+        <div class="repo-description">Descrizione breve della repository 1.</div>
+      </a>
+    </div>
+
+    <div class="repo-box">
+      <a href="https://github.com/stildedeye/NOME_REPO_2">
+        <div class="repo-title">NOME_REPO_2</div>
+        <div class="repo-description">Descrizione breve della repository 2.</div>
+      </a>
+    </div>
+
+    <!-- Aggiungi altri box qui copiando e incollando -->
+
+  </div>
 
   <div class="footer">
-    Pagina generata con ♥ da <a href="https://github.com/stildedeye">stildedeye</a>
+    © 2025 - <a href="https://github.com/stildedeye">stildedeye</a>
   </div>
+
 </body>
 </html>
-
