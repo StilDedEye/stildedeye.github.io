@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GitHub di stildedeye</title>
+  <title>stildedeye | GitHub Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 2rem;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
+      padding: 0;
     }
 
-    h1, h2 {
-      color: #58a6ff;
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #0d1117, #0b0f1a);
+      color: #c9d1d9;
+      line-height: 1.6;
     }
 
     a {
@@ -22,68 +24,158 @@
       color: inherit;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    header {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
     }
 
-    .repo-box {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .repo-box:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 10px #58a6ff33;
-    }
-
-    .repo-title {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    header h1 {
+      font-size: 2.8rem;
       color: #58a6ff;
+      margin-bottom: 0.5rem;
     }
 
-    .repo-description {
+    header p {
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .about h2 {
+      font-size: 1.8rem;
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      color: #c9d1d9;
+      font-size: 1rem;
+    }
+
+    .projects {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #58a6ff;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: rgba(22, 27, 34, 0.95);
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 10px transparent;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 18px #58a6ff44;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #58a6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
       font-size: 0.95rem;
       color: #8b949e;
     }
 
     .footer {
       text-align: center;
-      margin-top: 4rem;
+      padding: 2rem;
+      font-size: 0.9rem;
       color: #6e7681;
-      font-size: 0.85rem;
+    }
+
+    .footer a {
+      color: #58a6ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h1>Ciao, sono <a href="https://github.com/stildedeye">@stildedeye</a></h1>
-  <p>Qui trovi alcune delle mie repository pubbliche su GitHub:</p>
+  <header>
+    <h1>@stildedeye</h1>
+    <p>Student</p>
+  </header>
 
-  <div class="container">
-    <div class="repo-box">
-      <a href="https://github.com/stildedeye/NOME_REPO_1">
-        <div class="repo-title">NOME_REPO_1</div>
-        <div class="repo-description">Descrizione breve della repository 1.</div>
-      </a>
+  <section class="about">
+    <h2>Chi sono</h2>
+    <p>
+      Sono uno sviluppatore appassionato di tecnologia, design e musica.  
+      Mi piace costruire progetti che uniscano funzionalità e creatività,  
+      con una particolare attenzione alla privacy e alla semplicità d'uso.  
+      Su GitHub condivido tool, prototipi e idee per migliorare il mondo digitale.
+    </p>
+  </section>
+
+  <section class="projects">
+    <h2>Progetti</h2>
+    <div class="grid">
+      
+      <div class="project-card">
+        <a href="https://github.com/stildedeye/NOME_REPO_1">
+          <img src="./ic_launcher.png" width="50px" class="project-img" alt="Anteprima progetto 1" />
+          <div class="project-content">
+            <div class="project-title"></div>
+            <div class="project-description">Descrizione breve della repository 1.</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://github.com/stildedeye/NOME_REPO_2">
+          <img src="https://via.placeholder.com/600x300.png?text=Progetto+2" class="project-img" alt="Anteprima progetto 2" />
+          <div class="project-content">
+            <div class="project-title">NOME_REPO_2</div>
+            <div class="project-description">Descrizione breve della repository 2.</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Aggiungi altri progetti duplicando il blocco sopra -->
+
     </div>
-
-    <div class="repo-box">
-      <a href="https://github.com/stildedeye/NOME_REPO_2">
-        <div class="repo-title">NOME_REPO_2</div>
-        <div class="repo-description">Descrizione breve della repository 2.</div>
-      </a>
-    </div>
-
-    <!-- Aggiungi altri box qui copiando e incollando -->
-
-  </div>
+  </section>
 
   <div class="footer">
     © 2025 - <a href="https://github.com/stildedeye">stildedeye</a>
