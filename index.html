@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>stildedeye | GitHub Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Styles remain unchanged */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,9 +15,14 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0d1117, #0b0f1a);
+      background: radial-gradient(ellipse at top, #0d1117, #0b0f1a);
+      background-image: url('959fb1f51bc1026ace27acede55e1bc8.gif');
+      background-size: auto;
+      background-repeat: repeat;
+      background-attachment: fixed;
       color: #c9d1d9;
       line-height: 1.6;
+      padding-bottom: 4rem;
     }
 
     a {
@@ -30,9 +36,9 @@
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       color: #58a6ff;
-      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(88, 166, 255, 0.6);
     }
 
     header p {
@@ -49,67 +55,51 @@
     }
 
     .about h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #58a6ff;
       margin-bottom: 1rem;
     }
 
     .about p {
-      color: #c9d1d9;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .projects {
       max-width: 1200px;
-      margin: 3rem auto;
+      margin: 4rem auto;
       padding: 0 2rem;
     }
 
     .projects h2 {
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #58a6ff;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
     .project-card {
-      background: rgba(88, 166, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(88, 166, 255, 0.2);
       border-radius: 20px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 0 0 rgba(88, 166, 255, 0);
     }
 
     .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 30px rgba(88, 166, 255, 0.4);
-    }
-
-    .relive-card {
-      background: rgba(88, 166, 255, 0.06);
-      border: 1px solid rgba(88, 166, 255, 0.2);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .relive-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 30px rgba(222, 157, 7, 0.899);
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 0 40px rgba(88, 166, 255, 0.3);
+      border: 1px solid rgba(88, 166, 255, 0.4);
     }
 
     .project-img {
@@ -121,7 +111,7 @@
     }
 
     .project-content {
-      padding: 1.2rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -132,35 +122,35 @@
       font-size: 1.4rem;
       font-weight: 700;
       color: #58a6ff;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .project-description {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #c9d1d9;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     .project-button {
       align-self: flex-start;
       padding: 0.5rem 1rem;
-      background-color: #58a6ff;
+      background: linear-gradient(to right, #58a6ff, #79c0ff);
       color: #0d1117;
       font-weight: 600;
       font-size: 0.9rem;
       border: none;
       border-radius: 12px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
 
     .project-button:hover {
-      background-color: #79c0ff;
+      box-shadow: 0 0 12px rgba(121, 192, 255, 0.6);
     }
-    
+
     .footer {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 2rem 1rem;
       font-size: 0.9rem;
       color: #6e7681;
     }
@@ -183,25 +173,19 @@
   </header>
 
   <section class="about">
-    <h2>Chi sono</h2>
-    <p>
-      Sono uno sviluppatore appassionato di tecnologia, design e musica.  
-      Mi piace costruire progetti che uniscano funzionalità e creatività,  
-      con una particolare attenzione alla privacy e alla semplicità d'uso.  
-      Su GitHub condivido tool, prototipi e idee per migliorare il mondo digitale.
-    </p>
+    <h2>About Me</h2>
+    <p>I’m a student passionate about technology, Android development, and open-source software. I love turning ideas into real, working projects.</p>
   </section>
 
   <section class="projects">
     <h2>Projects</h2>
     <div class="grid">
 
-      <div class="relive-card">
-        <img src="./bannerGithubRelive.png" class="project-img" alt="Anteprima progetto 1" />
+      <div class="project-card">
         <div class="project-content">
           <div>
-            <div class="project-title">Relive - An Android app</div>
-            <div class="project-description">Relive is an Android app developed to save memories in a personal, private, and meaningful way.</div>
+            <div class="project-title">Relive - Android App</div>
+            <div class="project-description">An Android app to save memories in a private, personal, and meaningful way. Includes support for time capsules and full privacy.</div>
           </div>
           <a href="https://github.com/stildedeye/relive" target="_blank">
             <button class="project-button">View Project</button>
@@ -210,25 +194,22 @@
       </div>
 
       <div class="project-card">
-        <img src="https://via.placeholder.com/600x300.png?text=Progetto+2" class="project-img" alt="Anteprima progetto 2" />
         <div class="project-content">
           <div>
-            <div class="project-title">NOME_REPO_2</div>
-            <div class="project-description">Descrizione breve della repository 2.</div>
+            <div class="project-title">Ventures Downloader</div>
+            <div class="project-description">A Python CLI app based on Pytube to easily download videos and audio from YouTube.</div>
           </div>
-          <a href="https://github.com/stildedeye/NOME_REPO_2" target="_blank">
+          <a href="https://github.com/StilDedEye/VenturesDownloader" target="_blank">
             <button class="project-button">View Project</button>
           </a>
         </div>
       </div>
 
-      <!-- Puoi aggiungere altri project-card copiando il blocco sopra -->
-
     </div>
   </section>
 
   <div class="footer">
-    © 2025 - <a href="https://github.com/stildedeye">stildedeye</a>
+    © 2025 - <a href="https://github.com/stildedeye" target="_blank">stildedeye</a>
   </div>
 
 </body>
