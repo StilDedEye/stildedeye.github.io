@@ -78,12 +78,26 @@
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
+      padding: 0 1rem;
     }
 
+
+    @media (max-width: 480px) {
+      .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
     .project-card {
+      flex: 1 1 300px; /* cresce, si restringe, base di 300px */
+      max-width: 350px;
+      min-width: 280px;
+      margin: 0.5rem;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(88, 166, 255, 0.2);
       border-radius: 20px;
@@ -97,10 +111,57 @@
     }
 
     .project-card:hover {
-      transform: translateY(-5px) scale(1.015);
+      transform: translateY(-5px) scale(1.015) rotateZ(1deg);
       box-shadow: 0 0 40px rgba(88, 166, 255, 0.3);
       border: 1px solid rgba(88, 166, 255, 0.4);
     }
+
+
+    #project-card-relive {
+      color: #0d1117;
+      border: 1px solid rgba(220, 189, 17, 0.2);
+      box-shadow: 0 0 0 rgba(88, 166, 255, 0);
+    }
+
+    #project-card-relive:hover {
+      box-shadow: 0 0 40px rgba(202, 124, 15, 0.7);
+      transform: translateY(-5px) scale(1.02) rotateZ(1deg);
+    }
+
+    #project-card-rsa {
+      color: #0d1117;
+      border: 1px solid rgba(156, 61, 224, 0.2);
+      box-shadow: 0 0 0 rgba(88, 166, 255, 0);
+    }
+
+    #project-card-rsa:hover {
+      box-shadow: 0 0 40px rgba(146, 15, 202, 0.7);
+      transform: translateY(-5px) scale(1.02) rotateZ(1deg);
+    }
+
+    #project-card-ventures {
+      color: #0d1117;
+      border: 1px solid rgba(121, 255, 251, 0.2);
+      box-shadow: 0 0 0 rgba(88, 166, 255, 0);
+    }
+
+    #project-card-ventures:hover {
+      box-shadow: 0 0 40px rgba(121, 170, 255, 0.7);
+      transform: translateY(-5px) scale(1.02) rotateZ(1deg);
+    }
+
+    #project-card-nupposa {
+      color: #0d1117;
+      border: 1px solid rgba(60, 218, 99, 0.2);
+      box-shadow: 0 0 0 rgba(88, 166, 255, 0);
+    }
+
+    #project-card-nupposa:hover {
+      box-shadow: 0 0 40px rgba(99, 219, 56, 0.7);
+      transform: translateY(-5px) scale(1.02) rotateZ(1deg);
+    }
+
+    
 
     .project-img {
       width: 100%;
@@ -148,6 +209,22 @@
       box-shadow: 0 0 12px rgba(121, 192, 255, 0.6);
     }
 
+    #project-button-relive:hover {
+      box-shadow: 0 0 12px rgba(255, 195, 121, 0.6);
+    }
+
+    #project-button-ventures:hover {
+      box-shadow: 0 0 12px rgba(121, 217, 255, 0.6);
+    }
+
+    #project-button-rsa:hover {
+      box-shadow: 0 0 12px rgba(193, 121, 255, 0.6);
+    }
+
+    #project-button-nupposa:hover {
+      box-shadow: 0 0 12px rgba(130, 255, 121, 0.6);
+    }
+
     .footer {
       text-align: center;
       padding: 3rem 2rem 1rem;
@@ -174,33 +251,57 @@
 
   <section class="about">
     <h2>About Me</h2>
-    <p>I’m a student passionate about technology, Android development, and open-source software. I love turning ideas into real, working projects.</p>
+    <p>I’m a student passionate about technology, Android development, and open-source software. I love turning ideas into real, working projects and I love Minecraft too :)</p>
   </section>
 
   <section class="projects">
-    <h2>Projects</h2>
+    <h2>Some of my projects</h2>
     <div class="grid">
 
-      <div class="project-card">
+      <div class="project-card" id="project-card-relive">
         <div class="project-content">
           <div>
-            <div class="project-title">Relive - Android App</div>
+            <div style="color: orange;" class="project-title">Relive - Android App</div>
             <div class="project-description">An Android app to save memories in a private, personal, and meaningful way. Includes support for time capsules and full privacy.</div>
           </div>
           <a href="https://github.com/stildedeye/relive" target="_blank">
-            <button class="project-button">View Project</button>
+            <button id="project-button-relive" style="background: linear-gradient(to right, #caa80f, #ff9500);"  class="project-button">View Project</button>
           </a>
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" id="project-card-ventures">
         <div class="project-content">
           <div>
-            <div class="project-title">Ventures Downloader</div>
+            <div style="color: rgb(0, 85, 255);" class="project-title">Ventures Downloader</div>
             <div class="project-description">A Python CLI app based on Pytube to easily download videos and audio from YouTube.</div>
           </div>
           <a href="https://github.com/StilDedEye/VenturesDownloader" target="_blank">
-            <button class="project-button">View Project</button>
+            <button id="project-button-ventures" style="background: linear-gradient(to right, #0f5aca, #4edcce);" class="project-button">View Project</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card" id="project-card-rsa">
+        <div class="project-content">
+          <div>
+            <div style="color: rgb(187, 0, 255);" class="project-title">RSA Chat</div>
+            <div class="project-description">Project created for educational purposes to understand how RSA encryption works, implementing the algorithm in client-server communication.</div>
+          </div>
+          <a href="https://github.com/StilDedEye/RSA-Chat-Sample-Project" target="_blank">
+            <button id="project-button-rsa" style="background: linear-gradient(to right, #630fca, #b94edc);" class="project-button">View Project</button>
+          </a>
+        </div>
+      </div>
+      
+      <div class="project-card" id="project-card-nupposa">
+        <div class="project-content">
+          <div>
+            <div style="color: rgb(0, 255, 136);" class="project-title">Vanilla Nupposa World Map</div>
+            <div class="project-description">A live map showcasing my 5-year Minecraft world.</div>
+          </div>
+          <a href="https://stildedeye.github.io/VanillaNupposaWorldMap/#/224/64/-249/-7/MondoDaEsportare/render1" target="_blank">
+            <button id="project-button-nupposa" style="background: linear-gradient(to right, #0fca2e, #5a9b38);" class="project-button">View Project</button>
           </a>
         </div>
       </div>
