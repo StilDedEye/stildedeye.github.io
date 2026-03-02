@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23030508%22/><circle cx=%2250%22 cy=%2240%22 r=%2220%22 fill=%22%23ffffff%22/><path d=%22M25 80 A25 25 0 0 1 75 80%22 stroke=%22%23ffffff%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22/></svg>">
     <style>
+        /* CSS IDENTICO A SOPRA - Copia e Incolla lo stile di index.html qui */
         :root {
             --bg: #030508;
             --card-bg: rgba(13, 17, 23, 0.85);
@@ -19,7 +20,6 @@
             --accent-green: #3fb950;
             --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -32,10 +32,7 @@
             overflow-x: hidden;
             padding-bottom: 5rem;
         }
-
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-
-        /* Language Switcher */
         .lang-switch {
             position: fixed; top: 2rem; right: 2rem; z-index: 100;
             display: flex; gap: 0.5rem; background: var(--card-bg);
@@ -48,11 +45,9 @@
         }
         .lang-btn.active { background: var(--accent-blue); color: var(--bg); }
         .lang-btn:hover:not(.active) { color: var(--text-main); background: rgba(255, 255, 255, 0.05); }
-
         header { padding: 8rem 0 4rem; text-align: center; }
         header h1 { font-size: 4rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -2px; margin-top: 100px; }
         .real-name { font-size: 1.2rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 2rem; display: block; letter-spacing: 1px; text-transform: uppercase; }
-
         .github-wide-btn {
             display: inline-flex; align-items: center; padding: 0.8rem 2.5rem;
             background: rgba(255, 255, 255, 0.05); color: var(--text-main);
@@ -60,10 +55,7 @@
             text-decoration: none; font-weight: 600; transition: all 0.4s var(--ease-out-expo); gap: 12px;
         }
         .github-wide-btn:hover { background: var(--text-main); color: var(--bg); transform: translateY(-3px) scale(1.02); }
-
         .section-title { font-size: 1.4rem; margin: 4rem 0 3rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; text-align: center; opacity: 0.8; }
-
-        /* Timeline */
         .timeline-area { position: relative; height: 180px; margin: 2rem 0 5rem; display: flex; align-items: center; }
         .timeline-line-base { position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: var(--border); transform: translateY(-50%); z-index: 1; }
         .timeline-line-progress { position: absolute; top: 50%; left: 0; width: 75%; height: 2px; background: linear-gradient(90deg, var(--accent-blue), var(--accent-green)); transform: translateY(-50%); z-index: 2; }
@@ -76,8 +68,6 @@
         .t-content { position: absolute; top: 35px; text-align: center; width: 250px; }
         .t-content h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
         .t-content p { font-size: 0.85rem; color: var(--text-dim); }
-
-        /* Bento Grid */
         .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(180px, auto); gap: 1.5rem; }
         .bento-item {
             text-decoration: none; color: inherit; background: var(--card-bg); border: 1px solid var(--border);
@@ -85,12 +75,10 @@
             position: relative; overflow: hidden; transition: all 0.5s var(--ease-out-expo); z-index: 1;
         }
         .bento-item:hover { transform: translateY(-12px) scale(1.01); z-index: 10; background-color: rgba(255, 255, 255, 0.04); }
-        
         .bento-item.has-bg { background-size: cover; background-position: center; transition: transform 0.5s var(--ease-out-expo), border-color 0.4s; }
         .bento-item.has-bg::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: inherit; background-size: cover; background-position: center; z-index: -1; transition: transform 0.6s var(--ease-out-expo); }
         .bento-item.has-bg:hover::after { transform: scale(1.08); }
         .bento-item.has-bg::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(3,5,8,0.1) 0%, rgba(3,5,8,0.9) 85%); z-index: 1; transition: opacity 0.4s var(--ease-out-expo); }
-
         .large { grid-column: span 2; grid-row: span 2; min-height: 400px; }
         .medium { grid-column: span 1; grid-row: span 2; }
         .bento-content { position: relative; z-index: 2; transition: transform 0.4s var(--ease-out-expo); }
@@ -98,14 +86,11 @@
         .bento-tag { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.6rem; display: block; }
         .bento-item h3 { font-size: 1.8rem; margin-bottom: 0.6rem; letter-spacing: -0.5px; font-weight: 800; }
         .bento-item p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.5; }
-
         .relive:hover { border-color: var(--accent-orange); box-shadow: 0 25px 50px -12px rgba(255, 166, 87, 0.25); }
         .ventures:hover { border-color: var(--accent-blue); box-shadow: 0 25px 50px -12px rgba(88, 166, 255, 0.25); }
         .rsa:hover { border-color: var(--accent-purple); box-shadow: 0 25px 50px -12px rgba(210, 168, 255, 0.25); }
         .hobby:hover { border-color: var(--accent-green); box-shadow: 0 25px 50px -12px rgba(63, 185, 80, 0.25); }
-
         footer { text-align: center; padding: 8rem 0 3rem; color: var(--text-dim); font-size: 0.8rem; opacity: 0.6; }
-
         @media (max-width: 850px) {
             .bento-grid { grid-template-columns: 1fr; }
             .large, .medium { grid-column: span 1; grid-row: span 1; min-height: 300px; }
@@ -121,19 +106,19 @@
 </head>
 <body>
     <nav class="lang-switch">
-        <a href="index.html" class="lang-btn active">EN</a>
-        <a href="it.html" class="lang-btn">IT</a>
+        <a href="index.html" class="lang-btn">EN</a>
+        <a href="it.html" class="lang-btn active">IT</a>
     </nav>
 
     <header class="container">
         <h1>@stildedeye</h1>
         <span class="real-name">Andrea Silvani</span>
-        <a href="https://github.com/stildedeye" target="_blank" class="github-wide-btn">GitHub Profile</a>
+        <a href="https://github.com/stildedeye" target="_blank" class="github-wide-btn">Profilo GitHub</a>
     </header>
 
     <main class="container">
         <section>
-            <h2 class="section-title">Journey</h2>
+            <h2 class="section-title">Percorso</h2>
             <div class="timeline-area">
                 <div class="timeline-line-base"></div>
                 <div class="timeline-line-progress"></div>
@@ -142,16 +127,16 @@
                         <span class="t-year">2020 — 2025</span>
                         <div class="t-node"></div>
                         <div class="t-content">
-                            <h3>High School</h3>
-                            <p>I.I.S. Meucci (Computer Science)</p>
+                            <h3>Scuola Superiore</h3>
+                            <p>I.I.S. Meucci (Indirizzo Informatica e Telecomunicazioni)</p>
                         </div>
                     </div>
                     <div class="t-item current">
-                        <span class="t-year">2025 — PRESENT</span>
+                        <span class="t-year">2025 — OGGI</span>
                         <div class="t-node"></div>
                         <div class="t-content">
-                            <h3>B.Sc. Computer Science</h3>
-                            <p>University of Bari "Aldo Moro" (UniBA)</p>
+                            <h3>Laurea in Informatica</h3>
+                            <p>Università degli Studi di Bari "Aldo Moro" (UniBA)</p>
                         </div>
                     </div>
                 </div>
@@ -159,41 +144,41 @@
         </section>
 
         <section>
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Progetti in evidenza</h2>
             <div class="bento-grid">
                 <a href="https://stildedeye.github.io/Relive/" target="_blank" class="bento-item large relive has-bg" style="background-image: url('./relive.png');">
                     <div class="bento-content">
                         <span class="bento-tag" style="color: var(--accent-orange)">Android Development</span>
                         <h3>Relive</h3>
-                        <p>Memories and time-capsule management app with a focus on privacy and UX. Built for seamless digital storytelling.</p>
+                        <p>App per la gestione di ricordi e capsule del tempo digitali. Focus su privacy e un'esperienza utente curata.</p>
                     </div>
                 </a>
                 <a href="https://github.com/StilDedEye/VenturesDownloader" target="_blank" class="bento-item ventures">
                     <div class="bento-content">
                         <span class="bento-tag" style="color: var(--accent-blue)">Python CLI</span>
                         <h3>Ventures</h3>
-                        <p>High-speed multimedia downloader CLI utility powered by the PyTube library.</p>
+                        <p>Utility da riga di comando per il download rapido di contenuti multimediali basata su PyTube.</p>
                     </div>
                 </a>
                 <a href="https://github.com/StilDedEye/RSA-Chat-Sample-Project" target="_blank" class="bento-item rsa">
                     <div class="bento-content">
                         <span class="bento-tag" style="color: var(--accent-purple)">Security</span>
                         <h3>RSA Chat</h3>
-                        <p>An educational messaging system built to demonstrate and master the implementation of asymmetric cryptography (RSA).</p>
+                        <p>Sistema di messaggistica sviluppato a fini didattici per illustrare il funzionamento e l'implementazione della crittografia asimmetrica.</p>
                     </div>
                 </a>
                 <a href="https://stildedeye.github.io/VanillaNupposaWorldMap/#/224/64/-249/-7/MondoDaEsportare/render1" target="_blank" class="bento-item medium hobby has-bg" style="background-image: url('./mc.png');">
                     <div class="bento-content">
                         <span class="bento-tag" style="color: var(--accent-green)">Lab</span>
-                        <h3>Minecraft World Map</h3>
-                        <p>Interactive web-based isometric rendering of a survival world using Minecraft Overviewer.</p>
+                        <h3>Mappa Minecraft</h3>
+                        <p>Rendering isometrico interattivo di un mondo survival tramite Minecraft Overviewer.</p>
                     </div>
                 </a>
                 <div class="bento-item">
                     <div class="bento-content">
-                        <span class="bento-tag">Upcoming</span>
-                        <h3>J.A.R.V.I.S-like AI</h3>
-                        <p>Researching LLM integration for personal automation and voice-controlled systems.</p>
+                        <span class="bento-tag">Roadmap</span>
+                        <h3>AI Assistant (JARVIS-like)</h3>
+                        <p>Studio sull'integrazione di LLM per automazione personale e sistemi a controllo vocale.</p>
                     </div>
                 </div>
             </div>
